@@ -19,6 +19,7 @@ most apps I create.  Below is a list of libraries and features:
 * cross-env
 * hapi
 * inert (static files)
+* pm2 (process manager for node.js)
 * winston (logging)
 
 ## Testing
@@ -61,12 +62,12 @@ Task | Description
 -----|------------
 npm start | Start the create-react-app server for frontend development
 npm run server | Start the hapijs server for backend development
+npm run server:stop | Stop the hapijs server and more importantly the process watching it
 npm run test:client | Start the frontend test server
 npm run test:server | Start the backend test server
 
-All of these commands watch for changes and restart accordingly with
-the exception of the server, that one has to be restarted manually.
-Here is a list of other useful scripts:
+All of the commands above watch for changes and restart accordingly.
+Below is a list of other useful scripts:
 
 Task | Description
 -----|------------

@@ -91,3 +91,16 @@ info: Proxy: https://xxxxx.ngrok.io
 
 Where the 5 x's are replaced with an id.  You can then hand the url to
 whomever might need to access your site remotely.
+
+# Deployment
+
+The simplest way is to use the docker scripts I've provided and deploy
+them somewhere like AWS. To run the image locally:
+
+``` shell
+$ docker-compose up -d
+```
+
+Then navigate to http://localhost and you should see your app assuming
+you're running Docker for Mac.  If you're running Docker Toolbox or
+something else the localhost address may be something different.

@@ -66,7 +66,7 @@ npm run server:stop | Stop the hapijs server and more importantly the process wa
 npm run test:client | Start the frontend test server
 npm run test:server | Start the backend test server
 
-All of the commands above watch for changes and restart accordingly.
+All of the commands above watch for changes and restart accordingly.  
 Below is a list of other useful scripts:
 
 Task | Description

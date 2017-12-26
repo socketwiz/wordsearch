@@ -43,27 +43,27 @@ const provision = async () => {
         base.log.info(`${remoteAddress}: ${method} ${path} --> ${statusCode}`);
     });
 
-    await server.start((error) => {
+    try {
+        await server.start();
+    } catch (error) {
         if (error) {
             base.log.error(error);
             throw error;
         }
+    }
 
-        base.log.info(`LAN: http://localhost:${port}`);
+    // Connect to ngrok in dev mode
+    if (NGROK) {
+        NGROK.connect(port, (innerErr, url) => {
+            if (innerErr) {
+                return base.log.error(innerErr);
+            }
 
-        // Connect to ngrok in dev mode
-        if (NGROK) {
-            NGROK.connect(port, (innerErr, url) => {
-                if (innerErr) {
-                    return base.log.error(innerErr);
-                }
+            base.log.info(`Proxy: ${url}`);
+        });
+    }
 
-                base.log.info(`Proxy: ${url}`);
-            });
-        }
-    });
-
-    base.log.info('Server running at:', server.info.uri);
+    base.log.info(`LAN: ${server.info.uri}`);
 };
 
 provision();

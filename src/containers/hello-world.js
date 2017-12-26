@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import HelloWorld from '../components/hello-world';
 import {updateMessage} from '../actions/hello-world';
 import {withRouter} from 'react-router';
+import 'whatwg-fetch';
 
 const mapStateToProps = state => {
     return {

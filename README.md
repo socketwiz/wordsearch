@@ -45,6 +45,8 @@ most apps I create.  Below is a list of libraries and features:
 
 ``` shell
 $ git clone git@github.com:socketwiz/web-starter-kit.git <my-new-project>
+$ cd <my-new-project>
+$ npm install
 ```
 
 The simplest way to move forward from here requires `tmux` to be installed.

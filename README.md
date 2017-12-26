@@ -12,7 +12,7 @@ most apps I create.  Below is a list of libraries and features:
 * react-redux
 * react-router-dom
 * redux
-* redux-devtools
+* redux-devtools-extension
 * whatwg-fetch
 
 ## Backend
@@ -38,3 +38,4 @@ most apps I create.  Below is a list of libraries and features:
 * eslint-config-google
 * eslint-plugin-react
 * inspect-process (debugging)
+* various TypeScript types for an editor or IDE (I use emacs)

@@ -12,14 +12,14 @@ const server = new Hapi.Server({
     'port': port,
     'routes': {
         'files': {
-            'relativeTo': path.join(`${__dirname}/../`, 'public')
+            'relativeTo': path.join(`${__dirname}/../`, 'build')
         }
     }
 });
 const provision = async () => {
     await server.register(Inert);
 
-    // return anything in the public directory
+    // return anything in the build directory
     server.route({
         'method': 'GET',
         'path': '/{param*}',

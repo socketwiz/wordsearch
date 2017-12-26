@@ -32,8 +32,8 @@
     "test:client:coverage": "npm run test:client -- --coverage",
     "test:client:debug": "react-scripts --inspect-brk test --runInBand --env=jsdom",
     "test:server": "mocha --watch server/test",
-    "test:server:debug": "mocha --inspect-brk server/test",
-    "test:server:coverage": "nyc --reporter text --reporter html --report-dir coverage-server mocha server/test"
+    "test:server:coverage": "nyc --reporter text --reporter html --report-dir coverage-server mocha server/test",
+    "test:server:debug": "mocha --inspect-brk server/test"
   },
   "proxy": "http://localhost:8080/",
   "devDependencies": {

@@ -62,7 +62,6 @@ Task | Description
 -----|------------
 npm start | Start the create-react-app server for frontend development
 npm run server | Start the hapijs server for backend development
-npm run server:stop | Stop the hapijs server and more importantly the process watching it
 npm run test:client | Start the frontend test server
 npm run test:server | Start the backend test server
 
@@ -77,6 +76,7 @@ npm run test:client:coverage | Run the coverage tool over the frontend code base
 npm run test:server:coverage | Run the coverage tool over the backend code base
 npm run test:client:debug | Run the frontend test runner in debug mode
 npm run test:server:debug | Run the backend test runner in debug mode
+npm run server:stop | Stop the hapijs server and more importantly the process watching it
 
 To enable the tunnel run:
 

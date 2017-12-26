@@ -16,7 +16,6 @@ most apps I create.  Below is a list of libraries and features:
 * whatwg-fetch
 
 ## Backend
-* cross-env
 * hapi
 * inert (static files)
 * pm2 (process manager for node.js)
@@ -35,6 +34,7 @@ most apps I create.  Below is a list of libraries and features:
 * sinon
 
 ## Utilities
+* cross-env
 * eslint
 * eslint-config-google
 * eslint-plugin-react

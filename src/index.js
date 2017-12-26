@@ -2,13 +2,17 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import {createStore} from 'redux';
+import {composeWithDevTools} from 'redux-devtools-extension';
 import HelloWorld from './containers/hello-world';
 import {Provider} from 'react-redux';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import rootReducer from './reducers/index';
 
-const store = createStore(rootReducer);
+const composeEnhancers = composeWithDevTools({
+    // Specify name here, actionsBlacklist, actionsCreators and other options if needed
+});
+const store = createStore(rootReducer, composeEnhancers());
 
 ReactDOM.render(
     <Provider store={store}>

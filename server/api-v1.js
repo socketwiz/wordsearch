@@ -6,7 +6,7 @@
  * @param {Object} handle - HAPI handle object
  */
 function getHello(request, handle) {
-    return {'hello': 'world!'};
+    return {'message': 'hello world!'};
 }
 
 module.exports = [

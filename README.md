@@ -105,3 +105,21 @@ $ docker-compose up -d
 Then navigate to http://localhost and you should see your app assuming
 you're running Docker for Mac.  If you're running Docker Toolbox or
 something else the localhost address may be something different.
+
+# Test debugging
+
+If you would like to debug the tests using the Chrome dev tools find a
+location in one of your tests that you would like to break on and add
+the text `debugger;`. Next run one of:
+
+``` shell
+$ npm run test:client:debug # for frontend
+$ npm run test:server:debug # for backend
+```
+
+It will print a message to the console then wait.  Navigate to the
+following address: `chrome://inspect/`. Scan the page for the word
+"Target" and you will find your script, beneath that you will find a
+link called "inspect", click that link and it will bring up the dev
+tools paused at the beginning. On the `Sources` tab click the "Resume
+Execution" button and it "should" pause on your breakpoint.

@@ -27,7 +27,7 @@
     "lint:js": "npm run lint:eslint -- . ",
     "server:debug": "inspect server",
     "server": "pm2 start server --watch && tail -f error.log",
-    "server:stop": "pm2 stop server --watch 0",
+    "server:stop": "pm2 stop server --watch 0 && pm2 delete 0",
     "start": "react-scripts start",
     "test": "npm run lint && npm run test:client:coverage && npm run test:server:coverage",
     "test:client": "react-scripts test --env=jsdom",

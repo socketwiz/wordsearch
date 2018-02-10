@@ -6,11 +6,13 @@ most apps I create.  Below is a list of libraries and features:
 
 ## Frontend
 * bootstrap
+* helmet (update head information)
 * lodash
 * react
 * react-dom
 * react-redux
 * react-router-dom
+* react-snapshot (create static pages for SEO optimization)
 * redux
 * redux-devtools-extension
 * whatwg-fetch

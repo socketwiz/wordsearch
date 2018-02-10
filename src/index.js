@@ -6,7 +6,7 @@ import {composeWithDevTools} from 'redux-devtools-extension';
 import HelloWorld from './containers/hello-world';
 import {Provider} from 'react-redux';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {render} from 'react-snapshot';
 import rootReducer from './reducers/index';
 
 const composeEnhancers = composeWithDevTools({
@@ -14,7 +14,7 @@ const composeEnhancers = composeWithDevTools({
 });
 const store = createStore(rootReducer, composeEnhancers());
 
-ReactDOM.render(
+render(
     <Provider store={store}>
         <BrowserRouter>
             <Switch>

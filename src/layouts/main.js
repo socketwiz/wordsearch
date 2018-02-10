@@ -6,10 +6,10 @@ import PropTypes from 'prop-types';
 
 export default class Main extends Component {
     render() {
-        const {children} = this.props;
+        const {children, title} = this.props;
 
         return <div className="container">
-            <Header />
+            <Header title={title || 'Web Starter Kit'} />
 
             <div className="main">
                 {children}
@@ -25,5 +25,6 @@ Main.propTypes = {
         PropTypes.array,
         PropTypes.object,
         PropTypes.string
-    ])
+    ]),
+    'title': PropTypes.string
 };

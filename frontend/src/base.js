@@ -8,11 +8,13 @@
 export function checkStatus(response) {
     if (response.status >= 200 && response.status < 300) {
         return response;
-    } else {
-        const error = new Error(response.statusText);
+    }
 
-        error.response = response;
-        throw error;
+    if (response.status === 404) {
+        return Promise.reject(new Error('404 error, api not found'));
+    }
+    if (response.status === 500) {
+        return Promise.reject(new Error('500 error, something went wrong'));
     }
 }
 

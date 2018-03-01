@@ -1,15 +1,17 @@
 
-import {UPDATE_MESSAGE} from '../actions/hello-world';
+import {UPDATE_HELLO, UPDATE_HELLOS} from '../actions/hello-world';
 
 const initialState = {
-    'message': ''
+    'hellos': []
 };
 
 function helloWorldReducer(state = initialState, action) {
     switch (action.type) {
-        case UPDATE_MESSAGE:
+        case UPDATE_HELLO:
+            return {'hellos': state.hellos.concat(action.hello)};
+        case UPDATE_HELLOS:
             return Object.assign({}, state, {
-                'message': action.message
+                'hellos': action.hellos
             });
 
         default:

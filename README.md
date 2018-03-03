@@ -78,8 +78,6 @@ npm run test:server:debug | Start the loopback server in debug mode
 npm run test:server:coverage | Run the coverage tool over the backend code base
 npm run build | Build the frontend for production deployment
 
-All of the commands above watch for changes and restart accordingly.  
-
 To enable the tunnel run:
 
 ``` shell

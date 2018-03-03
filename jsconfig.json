@@ -1,18 +1,18 @@
 
 {
     "compilerOptions": {
-        "target": "es2017",
-        "allowSyntheticDefaultImports": true,
+        "target": "es2015",
         "noEmit": true,
         "checkJs": true,
         "jsx": "react",
         "lib": [ "dom", "es2017" ]
     },
     "include": [
-        "frontend/**/*"
+        "frontend/**/*",
+        "server/**/*"
     ],
     "exclude": [
-        "node_modules"
+        "frontend/build"
     ]
 }
 

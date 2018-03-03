@@ -20,10 +20,9 @@
     "eject": "react-scripts eject",
     "postbuild": "react-snap",
     "start": "react-scripts start",
-    "test": "npm run test:client:coverage",
-    "test:client": "react-scripts test --env=jsdom",
-    "test:client:coverage": "npm run test:client -- --coverage",
-    "test:client:debug": "react-scripts --inspect-brk test --runInBand --env=jsdom"
+    "test": "react-scripts test --env=jsdom",
+    "test:coverage": "npm run test -- --coverage",
+    "test:debug": "react-scripts --inspect-brk test --runInBand --env=jsdom"
   },
   "proxy": "http://localhost:8000/",
   "devDependencies": {

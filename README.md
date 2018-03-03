@@ -26,9 +26,11 @@ most apps I create.  Below is a list of libraries and features:
 * fetch-mock
 * jest-cli
 * mocha
+* nsp
 * react-test-renderer
 * redux-mock-store
 * sinon
+* supertest
 
 ## Utilities
 * cross-env
@@ -55,26 +57,26 @@ $ ./dev
 
 If you don't want to bother with `tmux` then you can run everything manually.
 
-From the root directory:
-
-Task | Description
------|------------
-npm start | Start the loopback server for backend development
-npm run stop | Stop the loopback server and more importantly the process watching it
-npm start:debug | Start the loopback server in debug mode
-npm run test | Start the backend test server
-npm run lint | Run eslint against the code base
-
-From the frontend directory:
-
 Task | Description
 -----|------------
 npm start | Start the create-react-app server for frontend development
-npm run test | Start the frontend test server
+npm run start:server | Start the loopback server for backend development
+npm run stop:server | Stop the loopback server and more importantly the process watching it
+npm run test:frontend | Start the frontend test server
+npm run test:server | Start the backend test server
+
+All of the commands above watch for changes and restart accordingly.
+Below is a list of other useful scripts:
+
+Task | Description
+-----|------------
+npm run test | Run all of the tests for both frontend and backend
+npm run lint | Run eslint against the entire code base
+npm run test:frontend:debug | Run the frontend test runner in debug mode
+npm run test:frontend:coverage | Run the coverage tool over the frontend code base
+npm run test:server:debug | Start the loopback server in debug mode
+npm run test:server:coverage | Run the coverage tool over the backend code base
 npm run build | Build the frontend for production deployment
-npm run lint | Run eslint against the code base
-npm run test:client:coverage | Run the coverage tool over the frontend code base
-npm run test:client:debug | Run the frontend test runner in debug mode
 
 All of the commands above watch for changes and restart accordingly.  
 
@@ -113,7 +115,8 @@ location in one of your tests that you would like to break on and add
 the text `debugger;`. Next run one of:
 
 ``` shell
-$ npm run test:client:debug # for frontend
+$ npm run test:frontend:debug # for frontend
+$ npm run test:server:debug # for backend
 ```
 
 It will print a message to the console then wait.  Navigate to the

@@ -7,10 +7,10 @@ module.exports = {
         // First application
         {
             'name': 'web-starter-kit',
-            'script': 'server/index.js',
+            'script': '.',
             'env_production': {
                 'NODE_ENV': 'production',
-                'PORT': 80
+                'PORT': 8000
             }
         }
     ]

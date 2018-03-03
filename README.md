@@ -12,7 +12,7 @@ most apps I create.  Below is a list of libraries and features:
 * react-dom
 * react-redux
 * react-router-dom
-* react-snapshot (create static pages for SEO optimization)
+* react-snap (create static pages for SEO optimization)
 * redux
 * redux-devtools-extension
 * whatwg-fetch
@@ -27,7 +27,6 @@ most apps I create.  Below is a list of libraries and features:
 * fetch-mock
 * jest-cli
 * mocha
-* nyc (code coverage)
 * react-test-renderer
 * redux-mock-store
 * sinon
@@ -57,24 +56,27 @@ $ ./dev
 
 If you don't want to bother with `tmux` then you can run everything manually.
 
+From the root directory:
+
+Task | Description
+-----|------------
+npm start | Start the loopback server for backend development
+npm start:debug | Start the loopback server in debug mode
+npm run test | Start the backend test server
+npm run lint | Run eslint against the code base
+
+From the frontend directory:
+
 Task | Description
 -----|------------
 npm start | Start the create-react-app server for frontend development
-npm run server | Start the loopback server for backend development
-npm run test:client | Start the frontend test server
-npm run test:server | Start the backend test server
-
-All of the commands above watch for changes and restart accordingly.  
-Below is a list of other useful scripts:
-
-Task | Description
------|------------
+npm run test | Start the frontend test server
 npm run build | Build the frontend for production deployment
 npm run lint | Run eslint against the code base
 npm run test:client:coverage | Run the coverage tool over the frontend code base
-npm run test:server:coverage | Run the coverage tool over the backend code base
 npm run test:client:debug | Run the frontend test runner in debug mode
-npm run test:server:debug | Run the backend test runner in debug mode
+
+All of the commands above watch for changes and restart accordingly.  
 
 To enable the tunnel run:
 
@@ -85,7 +87,7 @@ $ ENABLE_TUNNEL=1 npm run server
 Which should print out a url something like:
 
 ``` shell
-info: Proxy: https://xxxxx.ngrok.io
+Proxy: https://xxxxx.ngrok.io
 ```
 
 Where the 5 x's are replaced with an id.  You can then hand the url to

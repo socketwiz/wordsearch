@@ -6,7 +6,7 @@ import {composeWithDevTools} from 'redux-devtools-extension';
 import HelloWorld from './containers/hello-world';
 import {Provider} from 'react-redux';
 import React from 'react';
-import {render} from 'react-snapshot';
+import {render} from 'react-dom';
 import rootReducer from './reducers/index';
 
 const composeEnhancers = composeWithDevTools({

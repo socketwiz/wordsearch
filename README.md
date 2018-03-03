@@ -60,6 +60,7 @@ From the root directory:
 Task | Description
 -----|------------
 npm start | Start the loopback server for backend development
+npm run stop | Stop the loopback server and more importantly the process watching it
 npm start:debug | Start the loopback server in debug mode
 npm run test | Start the backend test server
 npm run lint | Run eslint against the code base

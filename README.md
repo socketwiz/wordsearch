@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+This project was bootstrapped with [Loopback](https://loopback.io/) for the backend (server directory). The frontend (frontend directory) was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 In addition to what Create React App provides I've put together this
 little project to add some of the other things I find myself using in

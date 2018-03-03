@@ -114,7 +114,6 @@ the text `debugger;`. Next run one of:
 
 ``` shell
 $ npm run test:client:debug # for frontend
-$ npm run test:server:debug # for backend
 ```
 
 It will print a message to the console then wait.  Navigate to the

@@ -5,7 +5,6 @@ little project to add some of the other things I find myself using in
 most apps I create.  Below is a list of libraries and features:
 
 ## Frontend
-* bootstrap
 * helmet (update head information)
 * lodash
 * react

@@ -1,5 +1,5 @@
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import {createStore} from 'redux';
 import {composeWithDevTools} from 'redux-devtools-extension';

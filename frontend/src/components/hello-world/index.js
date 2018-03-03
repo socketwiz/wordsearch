@@ -1,5 +1,4 @@
 
-import './hello-world.css';
 import Main from '../../layouts/main';
 import map from 'lodash/map';
 import PropTypes from 'prop-types';
@@ -42,42 +41,29 @@ class HelloWorld extends Component {
     render() {
         const {hellos} = this.props;
         const hellosPartial = map(hellos, (hello) => {
-            return <div className="row" key={hello.id}>
-                <div className="col-12">{hello.message}</div>
-            </div>;
+            return <p key={hello.id}>{hello.message}</p>;
         });
 
         return (
             <Main>
-                <div className="row">
-                    <div className="col-12">
-                        <a href="http://localhost:8000/explorer">Rest API Explorer</a>
-                    </div>
-                    <div className="col-12">
-                        <hr />
-                    </div>
-                </div>
+                <p>
+                    <a href="http://localhost:8000/explorer">Rest API Explorer</a>
+                </p>
+                <hr />
                 {hellosPartial}
-                <div className="row">
-                    <div className="col-12">
-                        <hr />
-                    </div>
-                    <div className="col-12">
-                        <form onSubmit={this.onSubmit.bind(this)}>
-                            <div className="form-group">
-                                <label htmlFor="exampleInputMessage1">Message</label>
-                                <input aria-describedby="messageHelp"
-                                    className="form-control"
-                                    id="exampleInputMessage1"
-                                    onChange={this.handleChange.bind(this)}
-                                    placeholder="Enter message"
-                                    type="message" />
-                            </div>
-                            <button type="submit" className="btn btn-primary">Submit</button>
-                        </form>
-                        
-                    </div>
-                </div>
+                <hr />
+                <form onSubmit={this.onSubmit.bind(this)}>
+                    <p>
+                        <label htmlFor="exampleInputMessage1">Message</label>
+                        <input aria-describedby="messageHelp"
+                            className="form-control"
+                            id="exampleInputMessage1"
+                            onChange={this.handleChange.bind(this)}
+                            placeholder="Enter message"
+                            type="message" />
+                    </p>
+                    <button type="submit" className="btn btn-primary">Submit</button>
+                </form>
             </Main>
         );
     }

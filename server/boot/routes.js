@@ -32,12 +32,14 @@ module.exports = function routes(app) {
     });
 
     app.get('/destroy-token', (req, res, next) => {
-        if (!req.accessToken) {
+        const accessToken = req.query.accessToken;
+
+        if (!accessToken) {
             // return 401:unauthorized if accessToken is not present
             return res.sendStatus(401);
         }
 
-        app.models.User.logout(req.accessToken.id, (error) => {
+        app.models.User.logout(accessToken, (error) => {
             if (error) {
                 return next(error);
             }

@@ -62,8 +62,8 @@ Task | Description
 npm start | Start the create-react-app server for frontend development
 npm run start:server | Start the loopback server for backend development
 npm run stop:server | Stop the loopback server and more importantly the process watching it
-npm run test:frontend | Start the frontend test server
-npm run test:server | Start the backend test server
+npm run test:frontend:watch | Start the frontend test server
+npm run test:server:watch | Start the backend test server
 
 All of the commands above watch for changes and restart accordingly.
 Below is a list of other useful scripts:
@@ -72,10 +72,11 @@ Task | Description
 -----|------------
 npm run test | Run all of the tests for both frontend and backend
 npm run lint | Run eslint against the entire code base
-npm run test:frontend:debug | Run the frontend test runner in debug mode
+npm run test:coverage | Run the coverage tool over the front and backend code base
 npm run test:frontend:coverage | Run the coverage tool over the frontend code base
-npm run test:server:debug | Start the loopback server in debug mode
 npm run test:server:coverage | Run the coverage tool over the backend code base
+npm run test:frontend:debug | Run the frontend test runner in debug mode
+npm run test:server:debug | Start the loopback server in debug mode
 npm run build | Build the frontend for production deployment
 
 To enable the tunnel run:

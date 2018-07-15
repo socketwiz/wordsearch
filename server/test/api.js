@@ -23,7 +23,7 @@ describe('Basic Tests', () => {
             .expect(200)
             .end((error, res) => {
                 if (error) {
-                    throw(error);
+                    return done(error);
                 }
 
                 expect(res.body).to.have.lengthOf(1);
@@ -36,7 +36,7 @@ describe('Basic Tests', () => {
             .expect(200)
             .end((error, res) => {
                 if (error) {
-                    throw(error);
+                    return done(error);
                 }
 
                 expect(res.body).to.have.property('message');

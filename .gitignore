@@ -24,8 +24,7 @@ npm-debug.log
 frontend/node_modules
 
 # testing
-frontend/coverage
-coverage-server
+coverage
 
 # production
 frontend/build

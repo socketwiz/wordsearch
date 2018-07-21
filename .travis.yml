@@ -11,3 +11,5 @@ addons:
 cache:
   directories:
   - node_modules
+
+after_script: "cat ./frontend/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"

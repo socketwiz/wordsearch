@@ -24,7 +24,7 @@
     "test:frontend:watch": "cd frontend && npm run test:watch",
     "test:server": "mocha server/test",
     "test:server:watch": "mocha --watch server/test",
-    "test:server:coverage": "nyc --reporter text --reporter html --report-dir coverage-server --exclude server/test mocha server/test",
+    "test:server:coverage": "nyc --reporter text --reporter html --report-dir coverage --exclude server/test mocha server/test",
     "test:server:debug": "mocha --inspect-brk server/test"
   },
   "dependencies": {
@@ -42,6 +42,7 @@
   },
   "devDependencies": {
     "chai": "4.1.2",
+    "coveralls": "3.0.2",
     "eslint": "5.1.0",
     "eslint-config-google": "0.9.1",
     "eslint-plugin-react": "7.10.0",

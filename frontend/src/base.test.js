@@ -7,7 +7,7 @@ import {checkStatus, fetchJSON} from './base';
 describe('Base', () => {
     it('return response on 200', () => {
         const response = {
-            'msg': 'works',
+            'json': () => {},
             'status': 200
         };
 
@@ -18,7 +18,7 @@ describe('Base', () => {
 
     it('return promise error on 404', (done) => {
         const response = {
-            'msg': 'not found',
+            'json': () => {},
             'status': 404
         };
 
@@ -31,7 +31,7 @@ describe('Base', () => {
 
     it('return promise error on 500', (done) => {
         const response = {
-            'msg': 'logic error',
+            'json': () => {},
             'status': 500
         };
 

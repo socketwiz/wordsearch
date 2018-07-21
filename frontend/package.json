@@ -20,7 +20,7 @@
     "eject": "react-scripts eject",
     "postbuild": "react-snap",
     "start": "react-scripts start",
-    "test": "cross-env CI=true react-scripts test --env=jsdom",
+    "test": "react-scripts test --env=jsdom",
     "test:coverage": "npm run test -- --coverage",
     "test:debug": "react-scripts --inspect-brk test --runInBand --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom"
@@ -37,11 +37,11 @@
     "enzyme-adapter-react-16": "1.1.1",
     "eslint": "5.1.0",
     "eslint-plugin-react": "7.10.0",
-    "fetch-mock": "6.5.0",
     "mocha": "5.2.0",
     "npm-check-updates": "2.14.2",
     "react-test-renderer": "16.4.1",
     "redux-devtools-extension": "2.13.5",
+    "redux-test-utils": "0.2.2",
     "sinon": "6.1.3"
   },
   "reactSnap": {
@@ -50,6 +50,9 @@
     ]
   },
   "jest": {
-    "coverageReporters": ["text", "html"]
+    "coverageReporters": [
+      "text",
+      "html"
+    ]
   }
 }

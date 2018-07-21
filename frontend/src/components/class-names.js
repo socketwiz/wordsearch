@@ -15,7 +15,7 @@
  * classOne.replace('foo', 'fuz');
  * classOne.get();
  *
- * @param {String|Array} names - list of classes
+ * @param {String|Number|Array} [names] - list of classes
  * @returns {Object} - list of functions available
  */
 export default function ClassNames(names) {

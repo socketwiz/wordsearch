@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HelloWorld main page renders HelloWorld without crashing 1`] = `
+exports[`HelloWorld component Internal methods should pass a selected value to the onChange function 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
@@ -412,7 +412,419 @@ ShallowWrapper {
 }
 `;
 
-exports[`HelloWorld main page renders a list without crashing 1`] = `
+exports[`HelloWorld component renders HelloWorld without crashing 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <HelloWorld />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <p>
+          <a
+                    href="http://localhost:8000/explorer"
+          >
+                    Rest API Explorer
+          </a>
+</p>,
+        <hr />,
+        Array [],
+        <hr />,
+        <form
+          onSubmit={[Function]}
+>
+          <p>
+                    <label
+                              htmlFor="exampleInputMessage1"
+                    >
+                              Message
+                    </label>
+                    <input
+                              aria-describedby="messageHelp"
+                              className="form-control"
+                              id="exampleInputMessage1"
+                              onChange={[Function]}
+                              placeholder="Enter message"
+                              type="message"
+                    />
+          </p>
+          <button
+                    className="btn btn-primary"
+                    type="submit"
+          >
+                    Submit
+          </button>
+</form>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <a
+            href="http://localhost:8000/explorer"
+>
+            Rest API Explorer
+</a>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Rest API Explorer",
+            "href": "http://localhost:8000/explorer",
+          },
+          "ref": null,
+          "rendered": "Rest API Explorer",
+          "type": "a",
+        },
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "hr",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "hr",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p>
+              <label
+                            htmlFor="exampleInputMessage1"
+              >
+                            Message
+              </label>
+              <input
+                            aria-describedby="messageHelp"
+                            className="form-control"
+                            id="exampleInputMessage1"
+                            onChange={[Function]}
+                            placeholder="Enter message"
+                            type="message"
+              />
+</p>,
+            <button
+              className="btn btn-primary"
+              type="submit"
+>
+              Submit
+</button>,
+          ],
+          "onSubmit": [Function],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <label
+                  htmlFor="exampleInputMessage1"
+>
+                  Message
+</label>,
+                <input
+                  aria-describedby="messageHelp"
+                  className="form-control"
+                  id="exampleInputMessage1"
+                  onChange={[Function]}
+                  placeholder="Enter message"
+                  type="message"
+/>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Message",
+                  "htmlFor": "exampleInputMessage1",
+                },
+                "ref": null,
+                "rendered": "Message",
+                "type": "label",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "aria-describedby": "messageHelp",
+                  "className": "form-control",
+                  "id": "exampleInputMessage1",
+                  "onChange": [Function],
+                  "placeholder": "Enter message",
+                  "type": "message",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Submit",
+              "className": "btn btn-primary",
+              "type": "submit",
+            },
+            "ref": null,
+            "rendered": "Submit",
+            "type": "button",
+          },
+        ],
+        "type": "form",
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <p>
+            <a
+                        href="http://localhost:8000/explorer"
+            >
+                        Rest API Explorer
+            </a>
+</p>,
+          <hr />,
+          Array [],
+          <hr />,
+          <form
+            onSubmit={[Function]}
+>
+            <p>
+                        <label
+                                    htmlFor="exampleInputMessage1"
+                        >
+                                    Message
+                        </label>
+                        <input
+                                    aria-describedby="messageHelp"
+                                    className="form-control"
+                                    id="exampleInputMessage1"
+                                    onChange={[Function]}
+                                    placeholder="Enter message"
+                                    type="message"
+                        />
+            </p>
+            <button
+                        className="btn btn-primary"
+                        type="submit"
+            >
+                        Submit
+            </button>
+</form>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <a
+              href="http://localhost:8000/explorer"
+>
+              Rest API Explorer
+</a>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Rest API Explorer",
+              "href": "http://localhost:8000/explorer",
+            },
+            "ref": null,
+            "rendered": "Rest API Explorer",
+            "type": "a",
+          },
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "hr",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "hr",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p>
+                <label
+                                htmlFor="exampleInputMessage1"
+                >
+                                Message
+                </label>
+                <input
+                                aria-describedby="messageHelp"
+                                className="form-control"
+                                id="exampleInputMessage1"
+                                onChange={[Function]}
+                                placeholder="Enter message"
+                                type="message"
+                />
+</p>,
+              <button
+                className="btn btn-primary"
+                type="submit"
+>
+                Submit
+</button>,
+            ],
+            "onSubmit": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <label
+                    htmlFor="exampleInputMessage1"
+>
+                    Message
+</label>,
+                  <input
+                    aria-describedby="messageHelp"
+                    className="form-control"
+                    id="exampleInputMessage1"
+                    onChange={[Function]}
+                    placeholder="Enter message"
+                    type="message"
+/>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Message",
+                    "htmlFor": "exampleInputMessage1",
+                  },
+                  "ref": null,
+                  "rendered": "Message",
+                  "type": "label",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "aria-describedby": "messageHelp",
+                    "className": "form-control",
+                    "id": "exampleInputMessage1",
+                    "onChange": [Function],
+                    "placeholder": "Enter message",
+                    "type": "message",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Submit",
+                "className": "btn btn-primary",
+                "type": "submit",
+              },
+              "ref": null,
+              "rendered": "Submit",
+              "type": "button",
+            },
+          ],
+          "type": "form",
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`HelloWorld component renders a list without crashing 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],

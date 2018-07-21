@@ -9,7 +9,7 @@ let Hello = {};
 
 const message = 'Hello World';
 
-describe('Basic Tests', () => {
+describe('Hello model', () => {
     before(() => {
         Hello = app.models.Hello;
     });
@@ -18,7 +18,7 @@ describe('Basic Tests', () => {
         Hello.upsert({'message': message}, () => done());
     }); 
 
-    it('Get messages', (done) => {
+    it('Get hello list', (done) => {
         request.get('/api/Hellos')
             .expect(200)
             .end((error, res) => {
@@ -31,7 +31,7 @@ describe('Basic Tests', () => {
             });
     });
 
-    it('Get message', (done) => {
+    it('Get single hello message', (done) => {
         request.get('/api/Hellos/1')
             .expect(200)
             .end((error, res) => {

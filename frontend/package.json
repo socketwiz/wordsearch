@@ -48,5 +48,8 @@
     "puppeteerArgs": [
       "--no-sandbox"
     ]
+  },
+  "jest": {
+    "coverageReporters": ["text", "html"]
   }
 }

@@ -38,7 +38,6 @@ frontend/build
 env
 env-prod
 .nyc_output
-__snapshots__
 
 npm-debug.log*
 yarn-debug.log*

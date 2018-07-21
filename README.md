@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/socketwiz/web-starter-kit.svg?branch=master)](https://travis-ci.org/socketwiz/web-starter-kit)
+
 This project was bootstrapped with [Loopback](https://loopback.io/) for the backend (server directory). The frontend (frontend directory) was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 In addition to what Create React App provides I've put together this

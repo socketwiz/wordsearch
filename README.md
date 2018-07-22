@@ -25,7 +25,6 @@ most apps I create.  Below is a list of libraries and features:
 * chai
 * enzyme
 * enzyme-adapter-react-16
-* redux-test-utils
 * jest-cli
 * mocha
 * nsp

@@ -18,6 +18,7 @@ class HelloWorld extends Component {
         const {value} = this.state;
 
         if (typeof putMessage === 'function') {
+            console.log(this.state);
             putMessage({'message': value}).catch(error => {
                 console.error(error);
             });

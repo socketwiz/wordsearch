@@ -51,4 +51,10 @@ const HelloWorldApp = connect(
     mapDispatchToProps
 )(HelloWorld);
 
-export default withRouter(HelloWorldApp);
+export default ((env) => {
+    if (env === 'test') {
+        return HelloWorldApp;
+    } else {
+        return withRouter(HelloWorldApp);
+    }
+})(process.env.NODE_ENV);

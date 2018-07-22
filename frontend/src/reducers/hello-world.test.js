@@ -1,4 +1,4 @@
-/* global afterEach, describe, expect, it */
+/* global describe expect it */
 
 import '../../setup';
 

@@ -1,4 +1,4 @@
-/* global afterEach, describe, expect, it */
+/* global describe expect it */
 
 import shallowWithStore from '../../setup';
 
@@ -11,8 +11,9 @@ describe('HelloWorld container', () => {
         const testState = {
             'helloWorldReducer': {}
         };
-        const store = createMockStore(testState)
+        const store = createMockStore(testState);
         const component = shallowWithStore(<HelloWorldContainer />, store);
+
         expect(typeof component).toBe('object');
     });
 });

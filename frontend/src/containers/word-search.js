@@ -1,26 +1,26 @@
 
 import {checkStatus, fetchJSON} from '../base';
 import {connect} from 'react-redux';
-import HelloWorld from '../components/hello-world';
-import {updateHello, updateHellos} from '../actions/hello-world';
+import WordSearch from '../components/word-search';
+import {updateWordSearch, updateWordSearches} from '../actions/word-search';
 import {withRouter} from 'react-router';
 import 'whatwg-fetch';
 
 const mapStateToProps = state => {
     return {
-        'hellos': state.helloWorldReducer.hellos
+        'wordSearches': state.wordSearchReducer.wordSearches
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
         'getMessage': () => {
-            return fetch('/api/Hellos')
+            return fetch('/api/WordSearches')
                 .then(checkStatus)
                 .then(fetchJSON)
                 .then(data => {
                     if (data) {
-                        dispatch(updateHellos(data));
+                        dispatch(updateWordSearches(data));
                     }
                 });
         },
@@ -34,27 +34,27 @@ const mapDispatchToProps = dispatch => {
                 'body': JSON.stringify(value)
             };
 
-            return fetch('/api/Hellos', options)
+            return fetch('/api/WordSearches', options)
                 .then(checkStatus)
                 .then(fetchJSON)
                 .then(data => {
                     if (data) {
-                        dispatch(updateHello(data));
+                        dispatch(updateWordSearch(data));
                     }
                 });
         }
     };
 };
 
-const HelloWorldApp = connect(
+const WordSearchApp = connect(
     mapStateToProps,
     mapDispatchToProps
-)(HelloWorld);
+)(WordSearch);
 
 export default ((env) => {
     if (env === 'test') {
-        return HelloWorldApp;
+        return WordSearchApp;
     } else {
-        return withRouter(HelloWorldApp);
+        return withRouter(WordSearchApp);
     }
 })(process.env.NODE_ENV);

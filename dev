@@ -1,32 +1,32 @@
 #! /bin/sh
 
-tmux has-session -t web-starter-kit
+tmux has-session -t wordsearch
 if [ $? != 0 ]
 then
-    tmux new-session -s web-starter-kit -n Server -d
+    tmux new-session -s wordsearch -n Server -d
 
     # create moar windows
-    tmux new-window -t web-starter-kit:1 -n Client
-    tmux new-window -t web-starter-kit:2 -n TestClient
-    tmux new-window -t web-starter-kit:3 -n TestServer
-    tmux new-window -t web-starter-kit:4 -n Zsh
+    tmux new-window -t wordsearch:1 -n Client
+    tmux new-window -t wordsearch:2 -n TestClient
+    tmux new-window -t wordsearch:3 -n TestServer
+    tmux new-window -t wordsearch:4 -n Zsh
 
     # run the server in the first window
-    tmux send-keys -t web-starter-kit:0.0 'cd ~/dev/web-starter-kit && npm run start:server' C-m
+    tmux send-keys -t wordsearch:0.0 'cd ~/dev/wordsearch && npm run start:server' C-m
 
     # run the client in the second window
-    tmux send-keys -t web-starter-kit:1.0 'cd ~/dev/web-starter-kit/frontend && npm start' C-m
+    tmux send-keys -t wordsearch:1.0 'cd ~/dev/wordsearch/frontend && npm start' C-m
 
     # run the client tests in the third window
-    tmux send-keys -t web-starter-kit:2.0 'cd ~/dev/web-starter-kit/frontend && npm run test:watch' C-m
+    tmux send-keys -t wordsearch:2.0 'cd ~/dev/wordsearch/frontend && npm test' C-m
 
     # run the server tests in the fourth window
-    tmux send-keys -t web-starter-kit:3.0 'cd ~/dev/web-starter-kit && npm run test:server:watch' C-m
+    tmux send-keys -t wordsearch:3.0 'cd ~/dev/wordsearch && npm run test:server:watch' C-m
 
     # just get to the proper path in the last window
-    tmux send-keys -t web-starter-kit:4.0 'cd ~/dev/web-starter-kit' C-m
+    tmux send-keys -t wordsearch:4.0 'cd ~/dev/wordsearch' C-m
 
     # select the server window and pane
-    tmux select-window -t web-starter-kit:0.0
+    tmux select-window -t wordsearch:0.0
 fi
-tmux attach -t web-starter-kit
+tmux attach -t wordsearch

@@ -5,21 +5,21 @@ const chai = require('chai');
 const expect = chai.expect;
 const request = require('supertest')(app);
 
-let Hello = {};
+let WordSearch = {};
 
-const message = 'Hello World';
+const message = 'Word Search';
 
-describe('Hello model', () => {
+describe('Word Search model', () => {
     before(() => {
-        Hello = app.models.Hello;
+        WordSearch = app.models.WordSearch;
     });
 
     beforeEach((done) => {
-        Hello.upsert({'message': message}, () => done());
+        WordSearch.upsert({'message': message}, () => done());
     }); 
 
-    it('Get hello list', (done) => {
-        request.get('/api/Hellos')
+    it('Get word search list', (done) => {
+        request.get('/api/WordSearches')
             .expect(200)
             .end((error, res) => {
                 if (error) {
@@ -31,8 +31,8 @@ describe('Hello model', () => {
             });
     });
 
-    it('Get single hello message', (done) => {
-        request.get('/api/Hellos/1')
+    it('Get single word search message', (done) => {
+        request.get('/api/WordSearches/1')
             .expect(200)
             .end((error, res) => {
                 if (error) {

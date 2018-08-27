@@ -4,22 +4,22 @@ import '../../../setup';
 
 import {mount, shallow} from 'enzyme';
 import React from 'react';
-import HelloWorld from './index';
+import WordSearch from './index';
 
-describe('HelloWorld component', () => {
-    it('renders HelloWorld without crashing', () => {
-        const wrapper = shallow(<HelloWorld />);
+describe('WordSearch component', () => {
+    it('renders WordSearch without crashing', () => {
+        const wrapper = shallow(<WordSearch />);
 
         expect(wrapper).toMatchSnapshot();
     });
 
     it('renders a list without crashing', () => {
-        const hellos = [
+        const wordSearches = [
             {'id': 0, 'message': 'foo'},
             {'id': 1, 'message': 'bar'},
             {'id': 2, 'message': 'baz'}
         ];
-        const wrapper = shallow(<HelloWorld hellos={hellos} />);
+        const wrapper = shallow(<WordSearch wordSearches={wordSearches} />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -32,7 +32,7 @@ describe('HelloWorld component', () => {
                 'catch': (error) => {}
             };
         };
-        const component = mount(<HelloWorld putMessage={putMessageMock} />);
+        const component = mount(<WordSearch putMessage={putMessageMock} />);
 
         component.find('form').simulate('submit');
     });
@@ -53,7 +53,7 @@ describe('HelloWorld component', () => {
 
                 return promise;
             };
-            const component = mount(<HelloWorld putMessage={putMessageMock} />);
+            const component = mount(<WordSearch putMessage={putMessageMock} />);
 
             component.find('form').simulate('submit');
             expect(spy).toHaveBeenCalled();
@@ -68,7 +68,7 @@ describe('HelloWorld component', () => {
 
                 return promise;
             };
-            const component = mount(<HelloWorld getMessage={getMessage} />);
+            const component = mount(<WordSearch getMessage={getMessage} />);
 
             component.find('form').simulate('submit');
         });
@@ -82,13 +82,13 @@ describe('HelloWorld component', () => {
 
                 return promise;
             };
-            const component = mount(<HelloWorld getMessage={getMessage} />);
+            const component = mount(<WordSearch getMessage={getMessage} />);
 
             component.find('form').simulate('submit');
         });
 
         it('should pass a selected value to the onChange function', () => {
-            const component = shallow(<HelloWorld />);
+            const component = shallow(<WordSearch />);
 
             component.find('input').simulate('change', {
                 'currentTarget': {

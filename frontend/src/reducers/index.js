@@ -1,9 +1,9 @@
 
 import {combineReducers} from 'redux';
-import helloWorldReducer from './hello-world';
+import wordSearchReducer from './word-search';
 
 const rootReducer = combineReducers({
-    helloWorldReducer
+    wordSearchReducer
 });
 
 export default rootReducer;

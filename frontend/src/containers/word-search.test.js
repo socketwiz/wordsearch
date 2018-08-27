@@ -3,29 +3,29 @@
 import shallowWithStore from '../../setup';
 
 import configureMockStore from 'redux-mock-store';
-import HelloWorldContainer from './hello-world';
+import WordSearchContainer from './word-search';
 import React from 'react';
 
 const mockStore = configureMockStore();
 
-describe('HelloWorld container', () => {
+describe('WordSearch container', () => {
     describe('message functions', () => {
         const data = {
             'id': 0,
-            'message': 'hello-from-me'
+            'message': 'word-search-from-me'
         };
 
         let store, wrapper;
 
         beforeEach(() => {
             const initialState = {
-                'helloWorldReducer': {
-                    'hellos': [data]
+                'wordSearchReducer': {
+                    'wordSearches': [data]
                 }
             };
 
             store = mockStore(initialState);
-            wrapper = shallowWithStore(<HelloWorldContainer />, store);
+            wrapper = shallowWithStore(<WordSearchContainer />, store);
         });
 
         it('should render successfully', () => {
@@ -37,12 +37,12 @@ describe('HelloWorld container', () => {
             // override global fetch
             window.fetch = jest.fn().mockImplementation(() => Promise.resolve({'status': 200, 'json': () => []}));
 
-            expect(wrapper.props().hellos).toHaveLength(1);
-            expect(wrapper.props().hellos[0]).toEqual(data);
+            expect(wrapper.props().wordSearches).toHaveLength(1);
+            expect(wrapper.props().wordSearches[0]).toEqual(data);
         });
 
         it.skip('should dispatch putMessage', () => {
-            const data = {'value': 'hello-world'};
+            const data = {'value': 'word-search'};
             const changeEvent = {'currentTarget': data};
             const submitEvent = {'preventDefault': () => {}};
 

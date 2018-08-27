@@ -1,5 +1,5 @@
 {
-  "name": "Hello",
+  "name": "WordSearch",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {

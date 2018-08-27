@@ -3,7 +3,7 @@ import './index.css';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import {createStore} from 'redux';
 import {composeWithDevTools} from 'redux-devtools-extension';
-import HelloWorld from './containers/hello-world';
+import WordSearch from './containers/word-search';
 import {Provider} from 'react-redux';
 import React from 'react';
 import {render} from 'react-dom';
@@ -18,7 +18,7 @@ render(
     <Provider store={store}>
         <BrowserRouter>
             <Switch>
-                <Route exact path="/" component={HelloWorld} />
+                <Route exact path="/" component={WordSearch} />
             </Switch>
         </BrowserRouter>
     </Provider>,

@@ -4,7 +4,7 @@ import map from 'lodash/map';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-class HelloWorld extends Component {
+class WordSearch extends Component {
     constructor(props) {
         super(props);
 
@@ -40,9 +40,9 @@ class HelloWorld extends Component {
     }
 
     render() {
-        const {hellos} = this.props;
-        const hellosPartial = map(hellos, (hello) => {
-            return <p key={hello.id}>{hello.message}</p>;
+        const {wordSearches} = this.props;
+        const wordSearchesPartial = map(wordSearches, (wordSearch) => {
+            return <p key={wordSearch.id}>{wordSearch.message}</p>;
         });
 
         return (
@@ -51,7 +51,7 @@ class HelloWorld extends Component {
                     <a href="http://localhost:8000/explorer">Rest API Explorer</a>
                 </p>
                 <hr />
-                {hellosPartial}
+                {wordSearchesPartial}
                 <hr />
                 <form onSubmit={this.onSubmit.bind(this)}>
                     <p>
@@ -70,10 +70,10 @@ class HelloWorld extends Component {
     }
 }
 
-HelloWorld.propTypes = {
+WordSearch.propTypes = {
     'getMessage': PropTypes.func,
-    'hellos': PropTypes.array,
+    'wordSearches': PropTypes.array,
     'putMessage': PropTypes.func
 };
 
-export default HelloWorld;
+export default WordSearch;

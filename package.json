@@ -1,5 +1,5 @@
 {
-  "name": "web-starter-kit",
+  "name": "word-search",
   "version": "0.2.1",
   "main": "server/server.js",
   "engines": {

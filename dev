@@ -9,7 +9,8 @@ then
     tmux new-window -t wordsearch:1 -n Client
     tmux new-window -t wordsearch:2 -n TestClient
     tmux new-window -t wordsearch:3 -n TestServer
-    tmux new-window -t wordsearch:4 -n Zsh
+    tmux new-window -t wordsearch:4 -n Code
+    tmux new-window -t wordsearch:5 -n Zsh
 
     # run the server in the first window
     tmux send-keys -t wordsearch:0.0 'cd ~/dev/wordsearch && npm run start:server' C-m
@@ -23,8 +24,11 @@ then
     # run the server tests in the fourth window
     tmux send-keys -t wordsearch:3.0 'cd ~/dev/wordsearch && npm run test:server:watch' C-m
 
-    # just get to the proper path in the last window
+    # code editor
     tmux send-keys -t wordsearch:4.0 'cd ~/dev/wordsearch' C-m
+
+    # just get to the proper path in the last window
+    tmux send-keys -t wordsearch:5.0 'cd ~/dev/wordsearch' C-m
 
     # select the server window and pane
     tmux select-window -t wordsearch:0.0

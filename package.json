@@ -30,6 +30,7 @@
   "dependencies": {
     "compression": "1.7.3",
     "cors": "2.8.4",
+    "cryptiles": "4.1.2",
     "helmet": "3.13.0",
     "loopback": "3.22.3",
     "loopback-boot": "2.27.1",

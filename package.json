@@ -1,6 +1,6 @@
 {
   "name": "web-starter-kit",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "main": "server/server.js",
   "engines": {
     "node": ">=4"
@@ -28,29 +28,29 @@
     "test:server:debug": "mocha --inspect-brk server/test"
   },
   "dependencies": {
-    "compression": "1.7.2",
+    "compression": "1.7.3",
     "cors": "2.8.4",
-    "helmet": "3.12.1",
-    "loopback": "3.21.0",
+    "helmet": "3.13.0",
+    "loopback": "3.22.3",
     "loopback-boot": "2.27.1",
-    "loopback-component-explorer": "6.1.0",
+    "loopback-component-explorer": "6.3.0",
     "loopback-component-storage": "3.5.0",
-    "ngrok": "3.0.1",
-    "pm2": "3.0.0",
+    "ngrok": "3.1.0",
+    "pm2": "3.2.1",
     "serve-favicon": "2.5.0",
-    "strong-error-handler": "3.0.0"
+    "strong-error-handler": "3.2.0"
   },
   "devDependencies": {
-    "chai": "4.1.2",
+    "chai": "4.2.0",
     "coveralls": "3.0.2",
-    "eslint": "5.1.0",
-    "eslint-config-google": "0.9.1",
-    "eslint-plugin-react": "7.10.0",
+    "eslint": "5.6.1",
+    "eslint-config-google": "0.10.0",
+    "eslint-plugin-react": "7.11.1",
     "inspect-process": "0.5.0",
     "mocha": "5.2.0",
     "npm-check-updates": "2.14.2",
-    "nyc": "12.0.2",
-    "supertest": "3.1.0"
+    "nyc": "13.0.1",
+    "supertest": "3.3.0"
   },
   "repository": {
     "type": "",

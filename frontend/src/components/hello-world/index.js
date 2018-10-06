@@ -48,7 +48,7 @@ class HelloWorld extends Component {
         return (
             <Main>
                 <p>
-                    <a href="http://localhost:8000/explorer">Rest API Explorer</a>
+                    <a href="http://localhost:8000/explorer/">Rest API Explorer</a>
                 </p>
                 <hr />
                 {hellosPartial}

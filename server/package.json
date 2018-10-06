@@ -1,0 +1,11 @@
+{
+  "name": "web-starter-kit-server",
+  "version": "0.0.1",
+  "scripts": {
+    "lint": "eslint --ignore-path ../.gitignore ."
+  },
+  "devDependencies": {
+    "eslint": "5.6.1",
+    "eslint-config-google": "0.10.0"
+  }
+}

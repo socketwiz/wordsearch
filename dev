@@ -1,7 +1,6 @@
 #! /bin/sh
 
-tmux has-session -t web-starter-kit
-if [ $? != 0 ]
+if ! tmux has-session -t web-starter-kit
 then
     tmux new-session -s web-starter-kit -n Server -d
 
@@ -18,7 +17,7 @@ then
     tmux send-keys -t web-starter-kit:1.0 'cd ~/dev/web-starter-kit/frontend && npm start' C-m
 
     # run the client tests in the third window
-    tmux send-keys -t web-starter-kit:2.0 'cd ~/dev/web-starter-kit/frontend && npm run test:watch' C-m
+    tmux send-keys -t web-starter-kit:2.0 'cd ~/dev/web-starter-kit/frontend && npm run test' C-m
 
     # run the server tests in the fourth window
     tmux send-keys -t web-starter-kit:3.0 'cd ~/dev/web-starter-kit && npm run test:server:watch' C-m

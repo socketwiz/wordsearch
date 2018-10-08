@@ -11,7 +11,7 @@ then
     tmux new-window -t web-starter-kit:4 -n Zsh
 
     # run the server in the first window
-    tmux send-keys -t web-starter-kit:0.0 'cd ~/dev/web-starter-kit && npm run start:server' C-m
+    tmux send-keys -t web-starter-kit:0.0 'cd ~/dev/web-starter-kit && npm run server:start' C-m
 
     # run the client in the second window
     tmux send-keys -t web-starter-kit:1.0 'cd ~/dev/web-starter-kit/frontend && npm start' C-m

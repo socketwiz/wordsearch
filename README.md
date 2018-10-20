@@ -61,8 +61,8 @@ If you don't want to bother with `tmux` then you can run everything manually.
 Task | Description
 -----|------------
 npm start | Start the create-react-app server for frontend development
-npm run start:server | Start the loopback server for backend development
-npm run stop:server | Stop the loopback server and more importantly the process watching it
+npm run server:start | Start the loopback server for backend development
+npm run server:stop | Stop the loopback server and more importantly the process watching it
 npm run test:frontend:watch | Start the frontend test server
 npm run test:server:watch | Start the backend test server
 

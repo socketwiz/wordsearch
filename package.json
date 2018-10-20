@@ -25,7 +25,8 @@
     "test:server": "cd server && npm test",
     "test:server:watch": "cd server && npm run test:watch",
     "test:server:coverage": "cd server && npm run test:coverage",
-    "test:server:debug": "cd server && npm run debug"
+    "test:server:debug": "cd server && npm run debug",
+    "updates": "(cd frontend && npm run update && npm install) && (cd server && npm run update && npm install)"
   },
   "repository": {
     "type": "",

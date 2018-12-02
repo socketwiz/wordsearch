@@ -1,10 +1,7 @@
 {
     "parserOptions": {
         "ecmaVersion": 8,
-        "sourceType": "module",
-        "ecmaFeatures": {
-            "jsx": true
-        }
+        "sourceType": "module"
     },
     "rules": {
         "array-bracket-spacing": [2, "never"],
@@ -36,23 +33,13 @@
         "no-spaced-func": 2,
         "no-unused-vars": 2
     },
-    "plugins": [
-        "react"
-    ],
     "extends": [
         "google",
-        "eslint:recommended",
-        "plugin:react/recommended"
+        "eslint:recommended"
     ],
     "env": {
-        "browser": true,
         "node": true,
         "es6": true
-    },
-    "globals": {
-        "_": true,
-        "React": true,
-        "ReactDOM": true
     }
 }
 

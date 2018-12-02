@@ -41,7 +41,9 @@ describe('WordSearch component', () => {
         let spy;
 
         afterEach(() => {
-            spy.mockClear();
+            if (spy) {
+                spy.mockClear();
+            }
         });
 
         it('should call onSubmit and catch error', () => {

@@ -1,7 +1,6 @@
 #! /bin/sh
 
-tmux has-session -t wordsearch
-if [ $? != 0 ]
+if ! tmux has-session -t wordsearch
 then
     tmux new-session -s wordsearch -n Server -d
 
@@ -13,7 +12,7 @@ then
     tmux new-window -t wordsearch:5 -n Zsh
 
     # run the server in the first window
-    tmux send-keys -t wordsearch:0.0 'cd ~/dev/wordsearch && npm run start:server' C-m
+    tmux send-keys -t wordsearch:0.0 'cd ~/dev/wordsearch && npm run server:start' C-m
 
     # run the client in the second window
     tmux send-keys -t wordsearch:1.0 'cd ~/dev/wordsearch/frontend && npm start' C-m

@@ -7,54 +7,54 @@ import {withRouter} from 'react-router';
 import 'whatwg-fetch';
 
 const mapStateToProps = state => {
-    return {
-        'wordSearches': state.wordSearchReducer.wordSearches
-    };
+  return {
+    'wordSearches': state.wordSearchReducer.wordSearches
+  };
 };
 
 const mapDispatchToProps = dispatch => {
-    return {
-        'getMessage': () => {
-            return fetch('/api/WordSearches')
-                .then(checkStatus)
-                .then(fetchJSON)
-                .then(data => {
-                    if (data) {
-                        dispatch(updateWordSearches(data));
-                    }
-                });
+  return {
+    'getMessage': () => {
+      return fetch('/api/WordSearches')
+        .then(checkStatus)
+        .then(fetchJSON)
+        .then(data => {
+          if (data) {
+            dispatch(updateWordSearches(data));
+          }
+        });
+    },
+    'putMessage': (value) => {
+      const options = {
+        'method': 'post',
+        'headers': {
+          'Accept': 'application/json, text/plain, */*',
+          'Content-Type': 'application/json'
         },
-        'putMessage': (value) => {
-            const options = {
-                'method': 'post',
-                'headers': {
-                    'Accept': 'application/json, text/plain, */*',
-                    'Content-Type': 'application/json'
-                },
-                'body': JSON.stringify(value)
-            };
+        'body': JSON.stringify(value)
+      };
 
-            return fetch('/api/WordSearches', options)
-                .then(checkStatus)
-                .then(fetchJSON)
-                .then(data => {
-                    if (data) {
-                        dispatch(updateWordSearch(data));
-                    }
-                });
-        }
-    };
+      return fetch('/api/WordSearches', options)
+        .then(checkStatus)
+        .then(fetchJSON)
+        .then(data => {
+          if (data) {
+            dispatch(updateWordSearch(data));
+          }
+        });
+    }
+  };
 };
 
 const WordSearchApp = connect(
-    mapStateToProps,
-    mapDispatchToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(WordSearch);
 
 export default ((env) => {
-    if (env === 'test') {
-        return WordSearchApp;
-    } else {
-        return withRouter(WordSearchApp);
-    }
+  if (env === 'test') {
+    return WordSearchApp;
+  } else {
+    return withRouter(WordSearchApp);
+  }
 })(process.env.NODE_ENV);

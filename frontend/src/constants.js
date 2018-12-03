@@ -1,5 +1,5 @@
 
-const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 export {
   alphabet

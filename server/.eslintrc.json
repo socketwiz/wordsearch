@@ -34,7 +34,6 @@
         "no-unused-vars": 2
     },
     "extends": [
-        "google",
         "eslint:recommended"
     ],
     "env": {

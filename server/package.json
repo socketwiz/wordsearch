@@ -46,19 +46,19 @@
     "src"
   ],
   "dependencies": {
-    "@loopback/boot": "^2.0.0",
-    "@loopback/context": "^3.0.0",
-    "@loopback/core": "^2.0.0",
-    "@loopback/openapi-v3": "^3.0.0",
-    "@loopback/repository": "^2.0.0",
-    "@loopback/rest": "^3.0.0",
-    "@loopback/rest-explorer": "^2.0.0",
-    "@loopback/service-proxy": "^2.0.0"
+    "@loopback/boot": "^2.0.1",
+    "@loopback/context": "^3.1.0",
+    "@loopback/core": "^2.1.0",
+    "@loopback/openapi-v3": "^3.1.0",
+    "@loopback/repository": "^2.0.1",
+    "@loopback/rest": "^3.0.1",
+    "@loopback/rest-explorer": "^2.0.1",
+    "@loopback/service-proxy": "^2.0.1"
   },
   "devDependencies": {
-    "@loopback/build": "^4.0.0",
-    "@loopback/testlab": "^2.0.0",
-    "@types/node": "^13.9.1",
+    "@loopback/build": "^4.0.1",
+    "@loopback/testlab": "^2.0.1",
+    "@types/node": "^13.9.2",
     "eslint": "^6.8.0",
     "npm-check-updates": "4.0.4",
     "pm2": "^4.2.3"
